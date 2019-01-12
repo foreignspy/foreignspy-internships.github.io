@@ -20,8 +20,8 @@ body{max-width:1300px}
 .blue{background-color:royalblue;height:800px}
 th, td{padding:9px;}
 tr{text-align: left;}
-tr:nth-child(even){background-color:white}
-tr:nth-child(2n+1){color:white;}
+tr:nth-child(even){background-color:black}
+tr:nth-child(2n+1){color:black;}
                                 /*same third*/ 
 .gray{background-color:grey}
 .list{font-weight:600}
