@@ -1,96 +1,36 @@
-body {
-    background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .1em
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.width {
-  max-width: 400px;
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
 }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0 0 10px 0;
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: red;
 }
 
-.pad {
-    padding-left: 25px;
-}
-
-a {
-  color: #00A2ED;
-  text-decoration: none;
-}
-
-a::after{
-  content: "";
-  background: white;
-	mix-blend-mode: exclusion;
-  width: calc(100% + 20px);
-  height: 0;
-  position: absolute;
-  bottom: -4px;
-  left: -10px;
-	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-a:hover::after{
-	height: calc(100% + 8px)
-}
-
-.links{
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
-  margin: 15px 0 0 0;
-}
-
-.container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-p {
+/* If you want the content centered horizontally and vertically */
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.air-img {
-  width: 50px;
-  height: 50px;
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
   border-radius: 50%;
-}
-
-.content {
-  flex: 1;
-  padding-left: 35px;
-}
-
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .air-img {
-    margin: auto;
-  }
-
-  .content {
-    padding-left: 0;
-  }
-
-  h1, .content {
-    text-align: center;
-  }
-
-  h1 {
-    margin-top: 15px;
-  }
 }
